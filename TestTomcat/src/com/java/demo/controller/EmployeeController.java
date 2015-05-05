@@ -39,6 +39,8 @@ public class EmployeeController
 	//Bind custom validator for submitted form
 	public EmployeeController()
 	{
+		
+		
 		ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();
 		validator = validatorFactory.getValidator();
 	}
@@ -50,6 +52,7 @@ public class EmployeeController
     public void initBinder(WebDataBinder binder) {
         binder.registerCustomEditor(DepartmentEntity.class, new DepartmentEditor());
     }
+	
 	/**
 	 * Bind all departments
 	 * */
